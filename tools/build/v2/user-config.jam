@@ -45,7 +45,7 @@
 # using gcc : 3.2 : g++-3.2 ;
 using gcc : i686 : i686-linux-gnu-g++ ;
 using gcc : x86_64 : x86_64-linux-gnu-g++ ;
-using gcc : x86_32 : x86_32-linux-gnux32-g++ ;
+using gcc : x86_32 : x86_64-linux-gnux32-g++ ;
 
 # -------------------
 # MSVC configuration.
