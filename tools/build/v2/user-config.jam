@@ -43,7 +43,15 @@
 
 # Configure specific gcc version, giving alternative name to use.
 # using gcc : 3.2 : g++-3.2 ;
-
+using gcc : i686 : i686-linux-gnu-g++ ;
+using gcc : x86_64 : x86_64-linux-gnu-g++ ;
+using gcc : x86_32 : x86_64-linux-gnux32-g++ ;
+using gcc : arm : arm-linux-gnueabi-g++ ;
+using gcc : arm64 : aarch64-linux-gnu-g++ ;
+using gcc : powerpc : powerpc-linux-gnu-g++ ;
+using gcc : powerpc64 : powerpc64-linux-gnu-g++ ;
+using gcc : mips : mips-linux-gnu-g++ ;
+using gcc : mips64 : mips64-linux-gnuabi64-g++ ;
 
 # -------------------
 # MSVC configuration.

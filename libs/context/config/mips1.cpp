@@ -6,6 +6,6 @@
 // accompanying file LICENSE_1_0.txt or copy at
 // http://www.boost.org/LICENSE_1_0.txt)
 
-#if !((defined(__mips) && __mips == 1) || defined(_MIPS_ISA_MIPS1) || defined(_R3000))
+#if !((defined(__mips) && __mips == 1) || defined(_MIPS_ISA_MIPS1) || defined(_R3000) || defined(_ABIO32) || defined(_ABI64))
 #error "Not MIPS1"
 #endif
