@@ -1,0 +1,33 @@
+diff --git a/libs/context/config/mips1.cpp b/libs/context/config/mips1.cpp
+index adc4a61..0adf5e6 100644
+--- a/libs/context/config/mips1.cpp
++++ b/libs/context/config/mips1.cpp
+@@ -6,6 +6,6 @@
+ // accompanying file LICENSE_1_0.txt or copy at
+ // http://www.boost.org/LICENSE_1_0.txt)
+ 
+-#if !((defined(__mips) && __mips == 1) || defined(_MIPS_ISA_MIPS1) || defined(_R3000))
++#if !((defined(__mips) && __mips == 1) || defined(_MIPS_ISA_MIPS1) || defined(_R3000) || defined(_ABIO32) || defined(_ABI64))
+ #error "Not MIPS1"
+ #endif
+diff --git a/tools/build/v2/user-config.jam b/tools/build/v2/user-config.jam
+index fbbf13f..175c31f 100644
+--- a/tools/build/v2/user-config.jam
++++ b/tools/build/v2/user-config.jam
+@@ -43,7 +43,15 @@
+ 
+ # Configure specific gcc version, giving alternative name to use.
+ # using gcc : 3.2 : g++-3.2 ;
+-
++using gcc : i686 : i686-linux-gnu-g++ ;
++using gcc : x86_64 : x86_64-linux-gnu-g++ ;
++using gcc : x86_32 : x86_64-linux-gnux32-g++ ;
++using gcc : arm : arm-linux-gnueabi-g++ ;
++using gcc : arm64 : aarch64-linux-gnu-g++ ;
++using gcc : ppc : ppc-linux-gnu-g++ ;
++using gcc : ppc64 : ppc64-linux-gnu-g++ ;
++using gcc : mips : mips-linux-gnu-g++ ;
++using gcc : mips64 : mips64-linux-gnuabi64-g++ ;
+ 
+ # -------------------
+ # MSVC configuration.
