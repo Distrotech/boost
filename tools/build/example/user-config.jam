@@ -47,6 +47,8 @@ using gcc : i686 : i686-linux-gnu-g++ ;
 using gcc : x86_64 : x86_64-linux-gnu-g++ ;
 using gcc : x86_32 : x86_64-linux-gnux32-g++ ;
 using gcc : arm : arm-linux-gnueabi-g++ ;
+using gcc : armv5 : armv5-linux-gnueabi-g++ ;
+using gcc : armv6 : armv6-linux-gnueabi-g++ ;
 using gcc : arm64 : aarch64-linux-gnu-g++ ;
 using gcc : ppc : ppc-linux-gnu-g++ ;
 using gcc : ppc64 : ppc64-linux-gnu-g++ ;
